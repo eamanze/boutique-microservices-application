@@ -5,7 +5,7 @@ metadata:
   name: currencyservice
   labels:
     app: currencyservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   selector:
     matchLabels:
@@ -60,7 +60,7 @@ metadata:
   name: currencyservice
   labels:
     app: currencyservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   type: ClusterIP
   selector:
@@ -74,7 +74,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: currencyservice
-  namespace: istio
+  namespace: prod-istio
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -82,7 +82,7 @@ metadata:
   name: loadgenerator
   labels:
     app: loadgenerator
-  namespace: istio
+  namespace: prod-istio
 spec:
   selector:
     matchLabels:
@@ -161,7 +161,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: loadgenerator
-  namespace: istio
+  namespace: prod-istio
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -169,7 +169,7 @@ metadata:
   name: productcatalogservice
   labels:
     app: productcatalogservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   selector:
     matchLabels:
@@ -223,7 +223,7 @@ metadata:
   name: productcatalogservice
   labels:
     app: productcatalogservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   type: ClusterIP
   selector:
@@ -237,7 +237,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: productcatalogservice
-  namespace: istio
+  namespace: prod-istio
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -245,7 +245,7 @@ metadata:
   name: checkoutservice
   labels:
     app: checkoutservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   selector:
     matchLabels:
@@ -308,7 +308,7 @@ metadata:
   name: checkoutservice
   labels:
     app: checkoutservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   type: ClusterIP
   selector:
@@ -322,7 +322,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: checkoutservice
-  namespace: istio
+  namespace: prod-istio
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -330,7 +330,7 @@ metadata:
   name: shippingservice
   labels:
     app: shippingservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   selector:
     matchLabels:
@@ -384,7 +384,7 @@ metadata:
   name: shippingservice
   labels:
     app: shippingservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   type: ClusterIP
   selector:
@@ -398,7 +398,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: shippingservice
-  namespace: istio
+  namespace: prod-istio
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -406,7 +406,7 @@ metadata:
   name: cartservice
   labels:
     app: cartservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   selector:
     matchLabels:
@@ -461,7 +461,7 @@ metadata:
   name: cartservice
   labels:
     app: cartservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   type: ClusterIP
   selector:
@@ -475,7 +475,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: cartservice
-  namespace: istio
+  namespace: prod-istio
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -483,7 +483,7 @@ metadata:
   name: redis-cart
   labels:
     app: redis-cart
-  namespace: istio
+  namespace: prod-istio
 spec:
   selector:
     matchLabels:
@@ -538,7 +538,7 @@ metadata:
   name: redis-cart
   labels:
     app: redis-cart
-  namespace: istio
+  namespace: prod-istio
 spec:
   type: ClusterIP
   selector:
@@ -554,7 +554,7 @@ metadata:
   name: emailservice
   labels:
     app: emailservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   selector:
     matchLabels:
@@ -610,7 +610,7 @@ metadata:
   name: emailservice
   labels:
     app: emailservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   type: ClusterIP
   selector:
@@ -624,7 +624,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: emailservice
-  namespace: istio
+  namespace: prod-istio
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -632,7 +632,7 @@ metadata:
   name: paymentservice
   labels:
     app: paymentservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   selector:
     matchLabels:
@@ -686,7 +686,7 @@ metadata:
   name: paymentservice
   labels:
     app: paymentservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   type: ClusterIP
   selector:
@@ -700,7 +700,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: paymentservice
-  namespace: istio
+  namespace: prod-istio
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -708,7 +708,7 @@ metadata:
   name: frontend
   labels:
     app: frontend
-  namespace: istio
+  namespace: prod-istio
 spec:
   selector:
     matchLabels:
@@ -799,7 +799,7 @@ metadata:
   name: frontend
   labels:
     app: frontend
-  namespace: istio
+  namespace: prod-istio
 spec:
   type: ClusterIP
   selector:
@@ -815,7 +815,7 @@ metadata:
   name: frontend-external
   labels:
     app: frontend
-  namespace: istio
+  namespace: prod-istio
 spec:
   type: NodePort
   selector:
@@ -829,7 +829,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: frontend
-  namespace: istio
+  namespace: prod-istio
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -837,7 +837,7 @@ metadata:
   name: recommendationservice
   labels:
     app: recommendationservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   selector:
     matchLabels:
@@ -897,7 +897,7 @@ metadata:
   name: recommendationservice
   labels:
     app: recommendationservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   type: ClusterIP
   selector:
@@ -911,7 +911,7 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: recommendationservice
-  namespace: istio
+  namespace: prod-istio
 ---
 apiVersion: apps/v1
 kind: Deployment
@@ -919,7 +919,7 @@ metadata:
   name: adservice
   labels:
     app: adservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   selector:
     matchLabels:
@@ -975,7 +975,7 @@ metadata:
   name: adservice
   labels:
     app: adservice
-  namespace: istio
+  namespace: prod-istio
 spec:
   type: ClusterIP
   selector:
@@ -989,5 +989,5 @@ apiVersion: v1
 kind: ServiceAccount
 metadata:
   name: adservice
-  namespace: istio
+  namespace: prod-istio
 # [END gke_release_kubernetes_manifests_microservices_demo]
